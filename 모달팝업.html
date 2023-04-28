@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      #modal {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #modal .inner {
+        width: 960px;
+        background: #fff;
+      }
+      #modal .inner .modaltop {
+        padding: 20px;
+        background: #0d3f3a;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+      }
+      #modal .inner span {
+        cursor: pointer;
+        color: #fff;
+      }
+      #modal .inner p {
+        text-align: left;
+      }
+      #modal .inner .modalin {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+      }
+      #modal .inner .modalin img {
+        width: 280px;
+      }
+      #modal .inner .modalin ul {
+        margin-left: 20px;
+      }
+      #modal .inner .modalin ul li {
+        padding: 5px 0;
+      }
+      #modal .inner .modalin ul li:first-of-type {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      #modal .inner .modalin ul li:nth-of-type(2) {
+        color: #1a7169;
+      }
+      #modal .inner .modalin ul li:nth-of-type(3) {
+        border-bottom: 1px solid #ccc;
+      }
+      #modal .inner .modalin ul li:nth-of-type(4) {
+        font-size: 14px;
+        color: #aaa;
+      }
+      #modal .inner .modalin ul li:nth-of-type(4) b {
+        color: #333;
+      }
+      .tab {
+        width: 100%;
+      }
+      .tab table {
+        width: 95%;
+        text-align: center;
+        border-collapse: collapse; 
+        margin: 0 20px 40px;
+        font-size: 14px;
+      }
+      .tab table tr:first-of-type, .tab table tr td:first-child {
+        background: rgb(241, 241, 241);
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #ccc;
+      }
+      .tab table tr:first-of-type td {
+        padding: 15px 0px;
+      }
+      .tab table tr td:first-child {
+        padding: 0 40px;
+      }
+      .tab table tr:nth-child(2) td, .tab table tr:nth-child(3) td {
+        padding: 15px 10px;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+      }
+      .tab table tr td:last-of-type {
+        border-right: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="myshow()">Opne modal</button>
+    <div id="modal">
+      <div class="inner" onclick="myhide()">
+        <div class="modaltop">
+            <p>초기1-A</p><span>X</span>
+        </div>
+        <div class="modalin">
+            <img src="./imges/20221215imeGy5jwed.jpg" alt="미음">
+            <ul>
+                <li>쌀미음</li>
+                <li>총 내용량 120g, 35kcal</li>
+                <li>생쌀가루 5.5%, 찹쌀가루 2.5%</li>
+                <li><b>원재료명 및 함량:</b> 정제수, 유기생쌀가루(유기쌀 100%:국산) 5.5%, 찹쌀가루(유기찹쌀 100%:국산) 2.5%
+                    이 제품은 알류,우유,대두,밀,게,새우,돼지고기,토마토,호두,잣,쇠고기,닭고기,오징어,조개류(굴, 전복, 홍합 포함)를 사용한 제품과 같은 제조시설에서 제조하고 있습니다.</li>
+            </ul>
+        </div>
+        <div class="tab">
+            <table>
+                <tr>
+                    <td>영양정보</td>
+                    <td>나트륨</td>
+                    <td>탄수화물</td>
+                    <td>당류</td>
+                    <td>지방</td>
+                    <td>트랜스지방</td>
+                    <td>포화지방</td>
+                    <td>콜레스트롤</td>
+                    <td>단백질</td>
+                </tr>
+                <tr>
+                    <td>총 함량</td>
+                    <td>0mg</td>
+                    <td>8g</td>
+                    <td>0g</td>
+                    <td>0g</td>
+                    <td>0g</td>
+                    <td>0g</td>
+                    <td>0mg</td>
+                    <td>1g</td>
+                </tr>
+                <tr>
+                    <td>영양성분 기준치</td>
+                    <td>0%</td>
+                    <td>9%</td>
+                    <td>-%</td>
+                    <td>0%</td>
+                    <td>-%</td>
+                    <td>-%</td>
+                    <td>-%</td>
+                    <td>7%</td>
+                </tr>
+            </table>
+        </div>
+      </div>
+    </div>
+    <script>
+      let modal = document.getElementById("modal");
+      function myshow() {
+        modal.style.display = "flex";
+      }
+      function myhide() {
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

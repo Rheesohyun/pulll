@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />-->
+
+    <!-- Demo styles -->
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+
+    .swiper {
+      width: 100%;
+    }
+
+   /* .swiper-slide {
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      border-radius: 5px;
+    }*/
+.toWrap {
+    margin-top: 40px;
+    width: 100%;
+    height: 750px;
+    background: url(./imges/bg_today.png) no-repeat bottom;
+}
+.today {
+    width: 1200px;
+    margin: 0px auto;
+}
+.today .stxt {
+    padding-top: 30px;
+    display: flex;
+   align-items: flex-end;
+}
+.today .stxt h2 {
+       font-size: 28px;
+       color: #fff;
+}
+.today .stxt p {
+    padding-left: 15px;
+    color: #fff;
+}
+.today .tomenuTap {
+ display: flex;
+ color: #fff;
+}
+.today .tomenuTap li {
+    font-size: 24px;
+    margin: 30px 40px 60px 0;
+}
+.today .tomenuTap li:first-child {
+    padding: 5px 30px;
+    background: #fff;
+    color: #000;
+    border-radius: 30px;
+    text-align: center;
+}
+.today .tomenuTap li:not(:first-child):hover {
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*오늘의 식단 상단 텍스트 끝*/
+.tomenu {
+    display: flex;
+}
+.tomenu li ul {
+    width: 333px;
+    text-align: center;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.tomenu li {
+    width: 333px;
+}
+.tomenu li ul li:nth-of-type(2) {
+    margin: 20px 0;
+}
+.tomenu li ul li:nth-of-type(2) span {
+    padding: 5px 10px;
+    color: #1a7169;
+    border: 1px solid #1a7169;
+}
+.tomenu li ul li img {
+    width: 333px;
+    cursor: pointer;
+}
+.tomenu li ul li:nth-of-type(3) {
+    font-size: 20px;
+    font-weight: bold;
+   margin-bottom: 10px;
+}
+.tomenu li ul li:nth-of-type(4) {
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: #aaa;
+}
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="toWrap">
+        <div class="today">
+            <div class="stxt"><h2>TODAY'S MENU</h2><p>매일 매일 달라지는 메뉴를 확인하세요.</p></div>
+            <ul class="tomenuTap">
+                <li>2023.04.24</li>
+                <li>영유아맞춤식</li>
+                <li>케어식/건기식</li>
+                <li>칼로리/영양균형식</li>
+            </ul>
+        </div>
+        <div class="swiper mySwiper3">
+            <div class="swiper-wrapper tomenu">
+                <li class="swiper-slide">
+                    <ul>
+                        <li onclick="myshow()"><img src="./imges/20221215imeGy5jwed.jpg" alt="미음"></li>
+                        <li><span>초기1-A</span></li>
+                        <li>쌀미음</li>
+                        <li>35kcal</li>
+                    </ul>
+                </li>
+                
+                <li class="swiper-slide">
+                    <ul>
+                    <li><img src="./imges/20221215jnthrW37m.jpg" alt="미음"></li>
+                    <li><span>초기2</span></li>
+                    <li>한우사과미음</li>
+                    <li>60kcal</li>
+                </ul>
+                </li>
+                <li class="swiper-slide">
+                    <ul>
+                        <li><img src="./imges/20221215b9sAeGS.jpg" alt="미음"></li>
+                        <li><span>후기B</span></li>
+                        <li>한우아스파라거스근대죽</li>
+                        <li>95kcal</li>
+                    </ul>
+                </li>
+                <li class="swiper-slide">
+                    <ul>
+                        <li><img src="./imges/20221215BzDW-GS2Dw.jpg" alt="미음"></li>
+                        <li><span>후기</span></li>
+                        <li>두부달걀표고버섯죽</li>
+                        <li>110kcal</li>
+                    </ul>
+                </li>
+                <li class="swiper-slide">
+                    <ul>
+                        <li><img src="./imges/20221215BzDW-GS2Dw.jpg" alt="미음"></li>
+                        <li><span>후기</span></li>
+                        <li>두부달걀표고버섯죽</li>
+                        <li>110kcal</li>
+                    </ul>
+                </li>
+                <li class="swiper-slide">
+                    <ul>
+                        <li><img src="./imges/20221215BzDW-GS2Dw.jpg" alt="미음"></li>
+                        <li><span>후기</span></li>
+                        <li>두부달걀표고버섯죽</li>
+                        <li>110kcal</li>
+                    </ul>
+                </li>
+                <li class="swiper-slide">
+                    <ul>
+                        <li><img src="./imges/20221215BzDW-GS2Dw.jpg" alt="미음"></li>
+                        <li><span>후기</span></li>
+                        <li>두부달걀표고버섯죽</li>
+                        <li>110kcal</li>
+                    </ul>
+                </li>
+                <li class="swiper-slide">
+                    <ul>
+                        <li><img src="./imges/20221215BzDW-GS2Dw.jpg" alt="미음"></li>
+                        <li><span>후기</span></li>
+                        <li>두부달걀표고버섯죽</li>
+                        <li>110kcal</li>
+                    </ul>
+                </li>
+                <li class="swiper-slide">
+                    <ul>
+                        <li><img src="./imges/20221215BzDW-GS2Dw.jpg" alt="미음"></li>
+                        <li><span>후기</span></li>
+                        <li>두부달걀표고버섯죽</li>
+                        <li>110kcal</li>
+                    </ul>
+                </li>
+            </div>
+            </div>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper3 = new Swiper(".mySwiper3", {
+        slidesPerView: 3,
+      spaceBetween: 40,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+</body>
+</html>
